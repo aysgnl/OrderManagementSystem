@@ -18,7 +18,12 @@ Bu proje, bir e-ticaret platformu için sipariş yönetim sistemi backend servis
 - [Docker](https://www.docker.com/get-started) (RabbitMQ için)
 
 ### Adım 1: Projeyi Klonlayın
-
 ```bash
 git clone https://github.com/aysgnl/OrderManagementSystem.git
 cd OrderManagementSystem
+
+###  Adım 2: RabbitMQ'yu Docker ile Başlatın
+RabbitMQ'yu Docker üzerinde başlatmak için aşağıdaki komutu çalıştırın:
+
+```bash
+docker run -d --hostname my-rabbit --name some-rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
